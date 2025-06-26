@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mostrar Data e Hora Atual</title>
+</head>
+<body>
+
+  <p id="paragrafoDataHora"></p>
+  <button onclick="mostrarDataHora()">Mostrar Data e Hora</button>
+
+  <script>
+    function mostrarDataHora() {
+      const agora = new Date();
+      // Formata a data e hora no padrão brasileiro: dd/mm/aaaa hh:mm:ss
+      const dataFormatada = agora.toLocaleDateString('pt-BR');
+      const horaFormatada = agora.toLocaleTimeString('pt-BR');
+      const texto = `Data: ${dataFormatada} - Hora: ${horaFormatada}`;
+      
+      document.getElementById('paragrafoDataHora').textContent = texto;
+    }
+  </script>
+
+</body>
+</html>
